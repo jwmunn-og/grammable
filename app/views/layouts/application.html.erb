@@ -12,13 +12,50 @@
   </head>
 
   <body>
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+    <div class="top-bar" id="example-menu">
+      <div class="row">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Grammable</li>
+            <!--<li>
+              <a href="#">One</a>
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>-->
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+          <% if current_user %>
+              <li>You're signed in as <%= current_user.email %>.</li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Header-->
+
     <% if notice.present? %>
       <p class="callout primary text-center"><%= notice %></p>
     <% end %>
     <% if alert.present? %>
       <p class="callout alert text-center"><%= alert %></p>
     <% end %>
-    
+
     <%= yield %>
 
   </body>
