@@ -61,3 +61,5 @@ gem 'foundation-rails'
 gem 'simple_form'
 
 gem 'devise'
+
+gem "factory_girl_rails", "~> 4.0"
