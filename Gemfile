@@ -63,3 +63,9 @@ gem 'simple_form'
 gem 'devise'
 
 gem "factory_girl_rails", "~> 4.0"
+
+gem 'carrierwave', '~> 1.0'
+
+gem "figaro"
+
+gem "fog"
