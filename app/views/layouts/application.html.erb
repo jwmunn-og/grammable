@@ -7,7 +7,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "Grammable" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <link href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
     <%= csrf_meta_tags %>
   </head>
@@ -63,6 +62,6 @@
     <% end %>
     <br />
     <%= yield %>
-
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   </body>
 </html>
