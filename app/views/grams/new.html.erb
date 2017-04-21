@@ -1,11 +1,11 @@
-<div class="row">
-  <div class="columns small-12 large-4 large-offset-4">
-    <h1>New Form</h1>
+<div class="row align-center">
+  <div class="columns small-10 medium-6 card form">
+    <h2>New Gram</h2>
 
     <%= simple_form_for @gram do |f| %>
       <%= f.input :picture %>
       <%= f.input :message %>
-      <%= f.submit "Post!" %>
+      <%= f.submit "Post", class: "button expanded my-btn" %>
     <% end %>
   </div>
 </div>

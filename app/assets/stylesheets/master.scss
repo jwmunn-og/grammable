@@ -1,0 +1,165 @@
+@import 'foundation';
+
+body {
+  background-color: #fafafa;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+body * {
+  font-family: inherit;
+}
+
+.menu > li > a {
+    padding: 0rem 1rem;
+}
+
+.top-bar {
+  background: #fff;
+  border-bottom: 1px solid #edeeee;
+  padding: 0;
+  // margin-bottom: 4rem;
+}
+
+.top-bar .show-for-small-only {
+  padding: 1rem 0;
+}
+
+.title-bar {
+  border-bottom: 1px solid #edeeee;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  // margin-bottom: 1rem;
+}
+
+.top-bar, .top-bar ul, .title-bar {
+    background-color: #fff;
+}
+
+.menu-icon:after {
+  background: #125688;
+  box-shadow: 0 7px 0 #125688, 0 14px 0 #125688;
+}
+
+.brand a {
+  color: #125688;
+  font-size: 2.5rem;
+  font-family: 'Engagement', cursive;
+  font-weight: normal;
+}
+
+.top-bar .add a {
+  font-weight: bold;
+  color: #125688;
+  font-size: 1rem;
+  padding-left: .5rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-bottom: 30px;
+  // padding-top: 60px;
+}
+
+
+.card p, .card .message, .comments {
+  font-size: 1rem;
+  margin: .5rem;
+
+  @media screen and (min-width: 64em) {
+    margin: 1.25rem;
+  }
+}
+
+.gram-actions p {
+   margin: .5rem .5rem .5rem 0;
+   @media screen and (min-width: 40em) {
+     margin: 1.25rem;
+   }
+}
+.comment {
+  font-size: 1rem;
+  margin-bottom: .25rem;
+}
+
+.card.form {
+  padding: 1rem;
+  
+  @media screen and (min-width: 64em) {
+    padding: 3rem;
+  }
+}
+
+label {
+  @media screen and (min-width: 64em) {
+    font-size: 1.25rem;
+  }
+}
+
+input {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.hr-margin {
+  margin: 0 20px;
+}
+
+.my-btn {
+  background-color: #125688;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.handle, .nav-handle {
+  margin: 10px;
+  // color: #125688;
+  font-weight: bold;
+  // font-size: 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-handle {
+  margin: 0;
+}
+
+.gram-actions a {
+  font-weight: bold;
+  padding-left: .5rem;
+
+  &.button {
+    margin: 0;
+  }
+
+  &.alert {
+    color: $alert-color;
+  }
+}
+
+hr {
+  margin: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.button {
+  border-radius: 3px;
+}
+
+.comment-handle {
+  font-weight: bold;
+}
+
+.comments textarea, .comments textarea:focus {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.comments hr {
+   margin: 1rem 0;
+}

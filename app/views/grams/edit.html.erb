@@ -1,0 +1,10 @@
+<div class="row align-center">
+  <div class="columns small-10 medium-6 card form">
+    <h2>Edit Gram</h2>
+    <%= simple_form_for @gram do |f| %>
+      <%= f.input :picture %>
+      <%= f.input :message %>
+      <%= f.submit "Update", class: "button expanded my-btn" %>
+    <% end %>
+  </div>
+</div>

@@ -8,36 +8,31 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <link href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-      <div class="title-bar-title">Menu</div>
+    <div class="title-bar show-for-small-only" data-responsive-toggle="top-nav" data-hide-for="medium">
+      <div class="row align-middle align-justify">
+        <div class="title-bar-title brand"><%= link_to "Grammable", root_path %></div>
+        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+        
+      </div>
     </div>
 
-    <div class="top-bar" id="example-menu">
-      <div class="row">
-        <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Grammable</li>
-            <!--<li>
-              <a href="#">One</a>
-              <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>-->
+    <div class="top-bar" id="top-nav">
+      <div class="row align-middle align-justify">
+        <div class="top-bar-left show-for-medium">
+          <ul class="menu">
+            <li class="menu-text brand"><%= link_to "Grammable", root_path %></li>
           </ul>
         </div>
-        <div class="top-bar-right">
-          <ul class="menu">
+        <div class="top-bar-right show-for-medium">
+          <ul class="menu add">
           <% if current_user %>
-              <li>You're signed in as <%= current_user.email %>.</li>
+              <li>Welcome, <span class="nav-handle"><%= current_user.email.split('@')[0] %></span> &middot;</li>
+              <li><%= link_to "New Post", new_gram_path %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             <% else %>
               <li><%= link_to "Sign In", new_user_session_path %></li>
@@ -45,6 +40,17 @@
             <% end %>
           </ul>
         </div>
+      </div>
+      <div class="row show-for-small-only align-center">
+        <ul class="menu add">
+          <% if current_user %>
+              <li><%= link_to "New Post", new_gram_path %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <% end %>
+          </ul>
       </div>
     </div>
     <!--End Header-->
@@ -55,7 +61,7 @@
     <% if alert.present? %>
       <p class="callout alert text-center"><%= alert %></p>
     <% end %>
-
+    <br />
     <%= yield %>
 
   </body>
