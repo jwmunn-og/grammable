@@ -1,5 +1,8 @@
 # This will guess the User class
 FactoryGirl.define do
+  factory :comment do
+    
+  end
   factory :user do
     sequence :email do |n|
       "dummyEmail#{n}@gmail.com"
